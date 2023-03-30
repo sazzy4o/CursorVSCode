@@ -1,5 +1,5 @@
 <h2 align="center"><img src="https://s1.ax1x.com/2023/03/24/ppBM3CV.png" height="120">
-<br><br>A Visual Studio Code - CursorVSCode (English translation of CursorCode)</h2>
+<br><br>CursorVSCode (English translation of CursorCode)</h2>
 <p align="center"><strong>Write, edit, and chat about your code with a powerful AI</strong></p>
 
 # Main Features
@@ -12,13 +12,18 @@
 
 # Getting Started
 
-1. Search for **CursorCode** in the [vscode extension store](https://marketplace.visualstudio.com/items?itemName=meteorstudio.cursorcode) to install
+1. Not currently available in the store
 
-2. Select the Cursor cursor icon on the left to enter the dialog page
-3. You can directly enter questions, or select code in the code box to ask
-4. Right-click on the code in the code box or right-click on a blank space, click **CursorCode** in the pop-up menu, and enter the requirements (generate/optimize code) in the input box
+2. Can build locally: 
+```
+npm ci
+vsce package
+```
+3. Install cursor-vscode-*.*.*.vsix with "Install Extension VSIX"
 
-> Note: Please click in the code box before asking, so that the cursor stays in one place (to help the AI better understand the code context)
+![Install extension](Install.png "Install extension")
+
+<center><img src="https://s1.ax1x.com/2023/03/24/ppBBykV.png"></center>
 
 <center><img src="https://s1.ax1x.com/2023/03/24/ppBBykV.png"></center>
 
