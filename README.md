@@ -37,3 +37,7 @@
 [CursorCode](https://github.com/Meteo-Pig/CursorCode)
 
 [Cursor](https://www.cursor.so/)
+
+# Related Projects:
+
+[CodeCursor (Cursor for Visual Studio Code)](https://github.com/Helixform/CodeCursor)
