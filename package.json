@@ -1,13 +1,13 @@
 {
-  "name": "cursorcode",
-  "displayName": "CursorCode",
-  "description": "a free AI coder with GPT",
+  "name": "cursor-vscode",
+  "displayName": "Cursor VS Code",
+  "description": "A free AI coding tool ⚡ by GPT (English version of CursorCode)",
   "version": "0.0.7",
-  "publisher": "meteorstudio",
+  "publisher": "sazzy4o",
   "icon": "resources/extensionIcon.png",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/Meteo-Pig/CursorCode"
+    "url": "https://github.com/sazzy4o/CursorVSCode"
   },
   "engines": {
     "vscode": "^1.76.0"

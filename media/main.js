@@ -54,7 +54,7 @@
   let clearBtn = document.getElementById('clear-msg');
 
   stopBtn.addEventListener('click', function (e) {
-    showInput(true, "已经结束响应，请开始新的问答...")
+    showInput(true, "Response has ended, please start a new Q&A...")
   })
 
   clearBtn.addEventListener('click', function (e) {
@@ -94,7 +94,7 @@
     let ele_div = createElement('chat-question')
     ele_div.innerText = message;
     let ele_div_answer = createElement('chat-answer')
-    ele_div_answer.innerText = '正在思考中...';
+    ele_div_answer.innerText = 'thinking...';
     window.scrollTo(0, document.body.scrollHeight);
   }
 
@@ -119,8 +119,8 @@
     preBlocks.forEach(preTag => {
       preTag.insertAdjacentHTML('afterbegin',
         `<div class="code-tool">
-          <a class="copy-btn" href="javascript:;">复制代码</a>
-          <a class="insert-btn" href="javascript:;">插入代码</a>
+          <a class="copy-btn" href="javascript:;">Copy code</a>
+          <a class="insert-btn" href="javascript:;">Insert Code</a>
        </div>`
       );
       let copyBtn = preTag.querySelector('.copy-btn');

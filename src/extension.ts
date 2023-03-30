@@ -101,8 +101,8 @@ export function activate(context: vscode.ExtensionContext) {
       // console.log(editor);
       vscode.window
         .showInputBox({
-          prompt: "主人，您有何吩咐?",
-          placeHolder: "请帮我生成/优化/审查...",
+          prompt: "What are your orders?",
+          placeHolder: "Please help me generate/optimize/review...",
         })
         .then((value) => {
           const selected = editor.document.getText(editor.selection);
@@ -126,8 +126,8 @@ export function activate(context: vscode.ExtensionContext) {
       // console.log(editor);
       vscode.window
         .showInputBox({
-          prompt: "主人，您有什么问题吗?",
-          placeHolder: "帮我解释一下这段代码...",
+          prompt: "Do you have any questions?",
+          placeHolder: "Help me explain this code...",
         })
         .then((value) => {
           provider.msgType = "freeform";
@@ -224,7 +224,7 @@ class CursorWebviewViewProvider implements vscode.WebviewViewProvider {
     const editor = vscode.window.activeTextEditor!;
     if (!editor) {
       vscode.window.showWarningMessage(
-        "CursorCode：对话前请先打开一个代码文件!"
+        "CursorCode：Please open a code file before talking!"
       );
       return false;
     }
@@ -339,7 +339,7 @@ class CursorWebviewViewProvider implements vscode.WebviewViewProvider {
       method: "POST",
       url: this.url + "/conversation",
       headers: {
-        "accept-language": "zh-CN",
+        "accept-language": "en-US",
         "content-type": "application/json",
         "user-agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cursor/0.1.0 Chrome/108.0.5359.62 Electron/22.0.0 Safari/537.36",
@@ -353,7 +353,7 @@ class CursorWebviewViewProvider implements vscode.WebviewViewProvider {
     } catch (e) {
       this._view?.webview.postMessage({
         type: "showInput",
-        value: "使用超出上限，请重试，如果还是不行，请稍等几分钟重试...",
+        value: "The usage exceeds the upper limit, please try again, if it still doesn't work, please wait a few minutes and try again...",
       });
       return;
     }
@@ -418,7 +418,7 @@ class CursorWebviewViewProvider implements vscode.WebviewViewProvider {
       console.log(e);
       this._view?.webview.postMessage({
         type: "showInput",
-        value: "使用超出上限，请重试，如果还是不行，请稍等几分钟重试...",
+        value: "The usage exceeds the upper limit, please try again, if it still doesn't work, please wait a few minutes and try again...",
       });
       return;
     }
@@ -478,7 +478,7 @@ class CursorWebviewViewProvider implements vscode.WebviewViewProvider {
               console.log("出错了", jsonString);
               this._view?.webview.postMessage({
                 type: "showInput",
-                value: "出错啦，请重试...",
+                value: "Something went wrong, please try again...",
               });
               return;
             }
@@ -512,7 +512,7 @@ class CursorWebviewViewProvider implements vscode.WebviewViewProvider {
       if (content.length < 5) {
         this._view?.webview.postMessage({
           type: "showInput",
-          value: "出错啦，请重试...",
+          value: "Something went wrong, please try again...",
         });
         console.error("异常断开");
         return;
@@ -522,7 +522,7 @@ class CursorWebviewViewProvider implements vscode.WebviewViewProvider {
     stream.on("error", (err: any) => {
       this._view?.webview.postMessage({
         type: "showInput",
-        value: "出错啦，请重试...",
+        value: "Something went wrong, please try again...",
       });
       console.error("异常断开");
       return;
@@ -651,24 +651,24 @@ class CursorWebviewViewProvider implements vscode.WebviewViewProvider {
     </head>
     <body>
       <div id="read-box">
-        <p style="font-size: 1.6em">欢迎使用CursorCode</p>
-        <p>对话会话：在下方输入框中输入问题</p>
-        <p>代码生成：右键代码框,在菜单中点击CourseCode选项输入需求</p>
-        <p>代码优化：在代码框中选中代码,右键在菜单中点击CourseCode选项，在上方弹出的输入框中输入需求</p>
-        <p>代码优化：在代码框中选中代码，在下方输入框中输入需求</p>
-        <p>快捷键一：在代码框中按下Ctrl+Alt+Y弹出代码生成/优化命令框</p>
-        <p>快捷键二：在代码框中按下Ctrl+Alt+U弹出对话消息发送框</p>
-        <p>Tips：如果出现空白，没有回答内容的情况，请直接点击停止响应</p>
-        <p>Github：https://github.com/Meteo-Pig/CursorCode</p>
+        <p style="font-size: 1.6em">Welcome to CursorCode</p>
+        <p>Conversation session: enter a question in the input box below</p>
+        <p>Code generation: Right-click the code box, click the CourseCode option in the menu to enter the requirements</p>
+        <p>Code optimization: select the code in the code box, right click on the CourseCode option in the menu, and enter the requirements in the input box that pops up above</p>
+        <p>Code optimization: select the code in the code box, and enter the requirements in the input box below</p>
+        <p>Shortcut key 1: Press Ctrl+Alt+Y in the code box to pop up the code generation/optimization command box</p>
+        <p>Shortcut key 2: Press Ctrl+Alt+U in the code box to pop up the dialogue message sending box</p>
+        <p>Tips: If there is a blank and no answer, please click Stop Response</p>
+        <p>Github: https://github.com/Meteo-Pig/CursorCode</p>
       </div>
 
-      <div id="chat-box" class="pt-6 text-sm">请输入你的问题：</div>
-      <div class="response-box"><button id="stop-response">停止响应</button></div>
+      <div id="chat-box" class="pt-6 text-sm">Please enter your question:</div>
+      <div class="response-box"><button id="stop-response">Stop responding</button></div>
       <div style="height: 80px;"></div>
 
       <div id="bottom-box">
-        <button id="clear-msg">清除会话</button>
-        <input class="h-10 w-full p-4 text-sm" type="text" id="prompt-input" placeholder="请输入你的问题..."/>
+        <button id="clear-msg">Clear session</button>
+        <input class="h-10 w-full p-4 text-sm" type="text" id="prompt-input" placeholder="Please enter your question..."/>
       </div>
     </body>
     <script src="${scriptUri}"></script>

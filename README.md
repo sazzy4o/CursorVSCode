@@ -1,25 +1,24 @@
 <h2 align="center"><img src="https://s1.ax1x.com/2023/03/24/ppBM3CV.png" height="120">
-<br><br>A Visual Studio Code - CursorCode</h2>
+<br><br>A Visual Studio Code - CursorVSCode (English translation of CursorCode)</h2>
 <p align="center"><strong>Write, edit, and chat about your code with a powerful AI</strong></p>
-<p align="center"><strong>一个基于Cursor API的GPT智能AI代码助手</strong></p>
 
-# 主要功能
+# Main Features
 
-- 📃智能对话：可以在侧边栏直接与机器人对话
-- 🔥代码生成：在代码中输入需求来生成代码
-- 📝代码优化：在代码中输入需求对代码进行优化
-- :keyboard:快速插入：在对话框中生成的代码，可直接点击快速插入到代码框对应的光标处
-- :key:快捷键：Ctrl+Alt+Y呼出代码生成，Ctrl+Alt+U呼出对话
+- 📃Intelligent conversation: chat directly with the robot in the sidebar
+- 🔥Code generation: generate code by entering requirements in the code
+- 📝Code optimization: optimize code by entering requirements in the code
+- :keyboard:Quick insertion: the code generated in the dialog box can be inserted quickly by clicking on the corresponding cursor in the code box
+- :key:Shortcut keys: Ctrl+Alt+Y to call up code generation, Ctrl+Alt+U to call up the dialog box
 
-# 开始使用
+# Getting Started
 
-1. 在[vscode扩展商店](https://marketplace.visualstudio.com/items?itemName=meteorstudio.cursorcode)中搜索**CursorCode**进行安装
+1. Search for **CursorCode** in the [vscode extension store](https://marketplace.visualstudio.com/items?itemName=meteorstudio.cursorcode) to install
 
-2. 在左侧选中Cursor光标图标进入对话框页面
-3. 可以直接输入问题，也可以在代码框中选中代码进行询问
-4. 在代码框中右击代码，或者在空白处右击，在弹出菜单中点击**CursorCode**，在弹出的输入框中输入需求（生成/优化代码）
+2. Select the Cursor cursor icon on the left to enter the dialog page
+3. You can directly enter questions, or select code in the code box to ask
+4. Right-click on the code in the code box or right-click on a blank space, click **CursorCode** in the pop-up menu, and enter the requirements (generate/optimize code) in the input box
 
-> 注意：询问前请先在代码框中点击，让光标保持在某一处（为了让AI更好的理解代码上下文）
+> Note: Please click in the code box before asking, so that the cursor stays in one place (to help the AI better understand the code context)
 
 <center><img src="https://s1.ax1x.com/2023/03/24/ppBBykV.png"></center>
 
@@ -29,10 +28,12 @@
 
 
 
-# 视频教程
+# Video Tutorial (Chinese)
 
 [https://www.bilibili.com/video/BV1iv4y1G7Js/](https://www.bilibili.com/video/BV1iv4y1G7Js/)
 
-# 友情链接
+# Links
 
-[Github](https://github.com/Meteo-Pig/CursorCode)	[Cursor](https://www.cursor.so/)
+[CursorCode](https://github.com/Meteo-Pig/CursorCode)
+
+[Cursor](https://www.cursor.so/)
